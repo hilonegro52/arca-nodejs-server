@@ -17,17 +17,17 @@ app.use(express.static(path.join(__dirname, "public")));
 app.post("/sendmail", (req, res) => {
   const transporter = nodemailer.createTransport({
     port: 465,
-    host: "mail.arca.com.ar",
+    host: HOST,
     auth: {
-      user: "test@arca.com.ar",
-      pass: "8A*.2$BGUDpj",
+      user: SENDER,
+      pass: PASSWORD,
     },
     secure: true,
   });
 
   const mailData = {
-    from: "test@arca.com.ar",
-    to: "estudiox12@gmail.com",
+    from: SENDER,
+    to: RECEIVER,
     subject: `Mensaje de ${req.body.nombre}`,
     html: `<hr>
   <span><b>Nombre: </b></span><span>${req.body.nombre}</span>

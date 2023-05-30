@@ -652,7 +652,7 @@
             0 === Object.keys(d).length &&
               o &&
               (h(!0),
-              fetch("http://localhost:3000/sendmail", {
+              fetch("https://arca.up.railway.app/sendmail", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
