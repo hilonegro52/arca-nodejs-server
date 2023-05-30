@@ -27,7 +27,7 @@ app.post("/sendmail", (req, res) => {
 
   const mailData = {
     from: "test@arca.com.ar",
-    to: "estudiox12@gmail.com",
+    to: "hi@arca.com.ar",
     subject: `Mensaje de ${req.body.nombre}`,
     html: `<hr>
   <span><b>Nombre: </b></span><span>${req.body.nombre}</span>
