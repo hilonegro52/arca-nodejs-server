@@ -5,6 +5,8 @@ const path = require("path");
 const app = express();
 app.use(express.json());
 
+const PORT = process.env.PORT || 3000;
+
 const PASSWORD = process.env.password;
 const RECEIVER = process.env.receiver;
 const SENDER = process.env.sender;
@@ -55,5 +57,5 @@ app.post("/sendmail", (req, res) => {
   });
 });
 
-app.listen(process.env.PORT || 3000);
-console.log("Escuchando en port: ", process.env.PORT || 3000);
+app.listen(PORT);
+console.log("Server en el puerto: ", PORT);
